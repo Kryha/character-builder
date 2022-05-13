@@ -1,7 +1,6 @@
 {
   "name": "character-builder",
   "version": "0.1.0",
-  "private": false,
   "dependencies": {
     "@agoric/assert": "^0.4.0",
     "@agoric/notifier": "^0.4.0",
