@@ -1,18 +1,18 @@
-// GENERATED FROM /Users/carlostrigoseguin/Documents/KRYHA/agoric/Agoric/character-builder/api/deploy.js
+// GENERATED FROM /Users/wietze/Documents/Kryha/clients/agoric/Agoric/agoric/api/deploy.js
 export default {
-  "INSTANCE_BOARD_ID": "board01422",
-  "INSTALLATION_BOARD_ID": "board02021",
-  "INVITE_BRAND_BOARD_ID": "board05311",
+  "INSTANCE_BOARD_ID": "715805464",
+  "INSTALLATION_BOARD_ID": "529406044",
+  "INVITE_BRAND_BOARD_ID": "1265655452",
   "BRIDGE_URL": "agoric-lookup:https://local.agoric.com?append=/bridge",
   "brandBoardIds": {
-    "Character": "board03523",
-    "Item": "board03125",
-    "Money": "board0074"
+    "Character": "474502210",
+    "Item": "112440918",
+    "Money": "1532665031"
   },
   "issuerBoardIds": {
-    "Character": "board05024",
-    "Item": "board00126",
-    "Money": "board0223"
+    "Character": "688500812",
+    "Item": "1675202761",
+    "Money": "1576549616"
   },
   "API_URL": "http://127.0.0.1:8000",
   "CONTRACT_NAME": "CharacterBuilder"

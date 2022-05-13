@@ -1,5 +1,5 @@
-// GENERATED FROM /Users/carlostrigoseguin/Documents/KRYHA/agoric/Agoric/character-builder/contract/deploy.js
+// GENERATED FROM /Users/wietze/Documents/Kryha/clients/agoric/Agoric/agoric/contract/deploy.js
 export default {
   "CONTRACT_NAME": "CharacterBuilder",
-  "INSTALLATION_BOARD_ID": "board02021"
+  "INSTALLATION_BOARD_ID": "529406044"
 };
