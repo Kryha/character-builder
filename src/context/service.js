@@ -43,8 +43,8 @@ const initialState = {
   isLoading: false,
 };
 
-const Context = (createContext < ServiceState) | (undefined > undefined);
-const DispatchContext = (createContext < Dispatch) | (undefined > undefined);
+const Context = createContext(undefined);
+const DispatchContext = createContext(undefined);
 
 const Reducer = (state, action) => {
   switch (action.type) {
