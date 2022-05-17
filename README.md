@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Baseball Card Store Dapp
 
-This project was bootstrapped with [Character Builder](https://github.com/facebook/create-react-app).
+TL;DR:
 
-## Available Scripts
+The Baseball Card Store Dapp sells baseball cards as NFT tokens in
+exchange for money.
 
-In the project directory, you can run:
+Install the
+[prerequisites](https://agoric.com/documentation/getting-started/before-using-agoric.html).
 
-### `npm start`
+Checkout the latest beta release for the sdk:
+```sh
+cd agoric-sdk
+git checkout beta
+yarn && yarn build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Then in a first terminal in the directory where you want to put your dapp, install the dapp:
+```sh
+agoric init --dapp-template dapp-card-store --dapp-branch beta my-card-store
+cd my-card-store
+agoric install
+# If the Agoric platform has not been started
+agoric start --reset --verbose
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In a second terminal, enter `agoric open` in a terminal window to open a wallet.
 
-### `npm test`
+When the UI changes from gray to white (be patient), transfer some
+funds from the **Agoric RUN currency** purse to the **Zoe fees**
+purse.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+agoric deploy contract/deploy.js api/deploy.js
+```
 
-### `npm run build`
+In a third terminal, 
+```sh
+# Navigate to the `ui` directory and start a local server
+cd ui && yarn start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Using the Dapp
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. `yarn start` will open a page at  http://127.0.0.1:3001.
+3. A window for your wallet should open.
+4. Under "Dapps" in the wallet, enable the CardStore Dapp.
+5. Now you should be able to click on a card to make an offer to buy
+   it.
+6. Approve the offer in your wallet
+7. View the card in your wallet.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Card Store](./readme-assets/card-store.png)
 
-### `npm run eject`
+To learn more about how to build Agoric Dapps, please see the [Dapp Guide](https://agoric.com/documentation/dapps/).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See the [Dapp Deployment Guide](https://github.com/Agoric/agoric-sdk/wiki/Dapp-Deployment-Guide) for how to deploy this Dapp on a public website, such as https://cardstore.testnet.agoric.com/
