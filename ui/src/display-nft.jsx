@@ -21,7 +21,6 @@ export const DisplayNftString = ({ nft, buyAction }) => {
 };
 
 export const DisplayNftObj = ({ nft, buyAction }) => {
-  // const decodedNft = JSON.parse(nft);
   return (
     <div key={nft.name}>
       <img src={nft.url} style={{ scale: 2 }} alt={'nft'} />

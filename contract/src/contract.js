@@ -24,7 +24,6 @@ const start = (zcf) => {
     minBidPerCard,
     timeAuthority,
   ) => {
-    // const encodedNfts = nfts.map((nft) => JSON.stringify(nft));
     const newNftForSaleAmount = AmountMath.make(brand, harden(nfts));
     const allNftForSalePayment = mint.mintPayment(newNftForSaleAmount);
 

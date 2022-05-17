@@ -152,20 +152,14 @@ function App() {
     <div className="App">
       <p>Wallet Connected{walletConnected ? '✔' : '✖️'}</p>
       <p>Dapp Approved {dappApproved ? '✔' : '✖️'}</p>
-      {/* <h2>
-        Token {tokenPetname} {tokenDisplayInfo}
-      </h2> */}
-      {availableNfts.map((nft, idx) => {
-        console.log('&&&&&&&&&&&', nft, tokenPurses);
 
-        return (
-          <DisplayNftString
-            key={idx}
-            nft={nft}
-            buyAction={() => submitCardOffer(nft, 1, tokenPurses[1])}
-          />
-        );
-      })}
+      {availableNfts.map((nft, idx) => (
+        <DisplayNftString
+          key={idx}
+          nft={nft}
+          buyAction={() => submitCardOffer(nft, 1, tokenPurses[1])}
+        />
+      ))}
       {/* <CardDetailModal
         open={!!activeCard}
         onClose={handleCardModalClose}

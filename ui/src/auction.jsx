@@ -15,7 +15,6 @@ const buyNft = async ({
 }) => {
   assert(nft, X`At least one nft must be chosen to purchase`);
   const invitation = await E(publicFacet).makeBidInvitationForKey(nft);
-  console.log(nft);
   const offerConfig = {
     // JSONable ID for this offer.  This is scoped to the origin.
     id: Date.now(),
