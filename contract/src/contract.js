@@ -14,7 +14,6 @@ import { FIRST_PRICE } from '@agoric/zoe/src/contracts/auction';
  * @type {ContractStartFn}
  */
 const start = (zcf) => {
-  const { issuer, mint, brand } = makeIssuerKit('Nft', AssetKind.SET);
   const zoeService = zcf.getZoeService();
   const mintNft = async (
     nfts,
@@ -24,8 +23,8 @@ const start = (zcf) => {
     minBidPerCard,
     timeAuthority,
   ) => {
-    const newNftForSaleAmount = AmountMath.make(brand, harden(nfts));
-    const allNftForSalePayment = mint.mintPayment(newNftForSaleAmount);
+    const newNftForSaleAmount = ;
+    const allNftForSalePayment = ;
 
     const proposal = harden({
       give: { Items: newNftForSaleAmount },
@@ -72,7 +71,7 @@ const start = (zcf) => {
 
   const creatorFacet = Far('Nft creator', {
     mintNft,
-    getIssuer: () => issuer,
+    getIssuer: () => ,
   });
 
   return harden({ creatorFacet });
